@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IT_K23 Movie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div>
+            <h1 style="margin: 0">IT_K23 Movie</h1>
+            <div style="font-size: 12px; color: var(--muted)"></div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#home" id="nav-home" class="active">Trang chủ</a>
+          <a href="#about" id="nav-about">Giới thiệu nhóm</a>
+        </nav>
+      </header>
+
+      <main class="main" id="home">
+        <!-- LEFT: poster + actions -->
+        <aside class="card">
+          <div class="poster" aria-hidden="true">
+            <!-- Replace poster.jpg with your poster file in assets/ folder -->
+            <img id="posterImg" src="/assets/poster.jpg" alt="Poster phim" />
+          </div>
+
+          <div class="actions">
+            <button
+              class="btn btn--primary"
+              id="btn-summary"
+              aria-haspopup="dialog"
+            >
+              <span class="shine"></span>
+              TÓM TẮT
+            </button>
+
+            <a
+              class="btn btn--outline"
+              id="btn-watch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              XEM PHIM
+            </a>
+          </div>
+
+          <div class="meta">
+            <div class="row">
+              <strong>Thể loại:</strong><span>Phim hoạt hình</span>
+            </div>
+            <div class="row">
+              <strong>Thời lượng:</strong><span>6 phút 30 giây</span>
+            </div>
+            <div class="row">
+              <strong>Ngày công chiếu:</strong><span>26/08/2025</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT: video preview -->
+        <section class="videoCard">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 12px;
+            "
+          >
+            <div style="font-weight: 700">Xem phim</div>
+            <div style="font-size: 13px; color: var(--muted)">
+              YouTube Preview
+            </div>
+          </div>
+          <div class="videoWrap" id="videoWrap">
+            <!-- YouTube iframe (replace VIDEO_ID below in script) -->
+            <iframe
+              id="ytFrame"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+      </main>
+
+      <!-- ABOUT section -->
+      <section id="about">
+        <div class="card">
+          <div class="about-grid">
+            <div class="about-left">
+              <img class="groupImg" src="/assets/group.jpg" alt="Ảnh nhóm" />
+            </div>
+
+            <div class="about-right">
+              <h3 style="margin-top: 0">Giới thiệu nhóm</h3>
+              <p style="color: var(--muted); margin-top: 6px">
+                Dưới đây là thông tin chi tiết các thành viên trong nhóm. Bấm
+                vào từng thành viên để hiện thông tin chi tiết.
+              </p>
+
+              <div class="member-list">
+                <div
+                  class="member member-row"
+                  data-role="Trưởng nhóm"
+                  data-name="Trần Đức Quân"
+                  data-id="23120075"
+                  data-email="ducq317@gmail.com"
+                  data-img="/assets/ducquan.jpg"
+                >
+                  <img src="/assets/ducquan.jpg" alt="Trần Đức Quân" />
+                  <div class="info">
+                    <div class="name">Trần Đức Quân</div>
+                    <div class="role">
+                      Trưởng nhóm • MSSV: 23120075 • ducq317@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="member member-row"
+                  data-role="Thư ký"
+                  data-name="Lê Hải Đăng"
+                  data-id="23122005"
+                  data-email="haidang72910@gmail.com"
+                  data-img="/assets/haidang.jpg"
+                >
+                  <img src="/assets/haidang.jpg" alt="Lê Hải Đăng" />
+                  <div class="info">
+                    <div class="name">Lê Hải Đăng</div>
+                    <div class="role">
+                      Thư ký • MSSV: 23122005 • haidang72910@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="member member-row"
+                  data-role="Thành viên"
+                  data-name="Nguyễn Nhật Minh"
+                  data-id="23122010"
+                  data-email="nguyennhatminhlk@gmail.com"
+                  data-img="/assets/nhatminh.jpg"
+                >
+                  <img src="/assets/nhatminh.jpg" alt="Nguyễn Nhật Minh" />
+                  <div class="info">
+                    <div class="name">Nguyễn Nhật Minh</div>
+                    <div class="role">
+                      Thành viên • MSSV: 23122010 • nguyennhatminhlk@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="member member-row"
+                  data-role="Thành viên"
+                  data-name="Nguyễn Văn Khoa"
+                  data-id="23122016"
+                  data-email="nvkhoa2711@gmail.com"
+                  data-img="/assets/vankhoa.jpg"
+                >
+                  <img src="/assets/vankhoa.jpg" alt="Nguyễn Văn Khoa" />
+                  <div class="info">
+                    <div class="name">Nguyễn Văn Khoa</div>
+                    <div class="role">
+                      Thành viên • MSSV: 23122016 • nvkhoa2711@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="member member-row"
+                  data-role="Thành viên"
+                  data-name="Lê Thái Ngọc"
+                  data-id="23122012"
+                  data-email="lethaingoc210@gmail.com"
+                  data-img="/assets/thaingoc.jpg"
+                >
+                  <img src="/assets/thaingoc.jpg" alt="Lê Thái Ngọc" />
+                  <div class="info">
+                    <div class="name">Lê Thái Ngọc</div>
+                    <div class="role">
+                      Thành viên • MSSV: 23122012 • lethaingoc210@gmail.com
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="member member-row"
+                  data-role="Thành viên"
+                  data-name="Bạch Trương Tấn Phát"
+                  data-id="23120316"
+                  data-email="bachtruongtanphat@gmail.com"
+                  data-img="/assets/tanphat.jpg"
+                >
+                  <img src="/assets/tanphat.jpg" alt="Bạch Trương Tấn Phát" />
+                  <div class="info">
+                    <div class="name">Bạch Trương Tấn Phát</div>
+                    <div class="role">
+                      Thành viên • MSSV: 23120316 • bachtruongtanphat@gmail.com
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 14px">
+                <div style="font-weight: 700; margin-bottom: 6px">
+                  Tài liệu nhóm
+                </div>
+                <div class="downloads">
+                  <a class="dl" href="assets/contract.pdf" download
+                    >Hợp đồng thành lập nhóm (PDF)</a
+                  >
+                  <a class="dl" href="assets/plan.pdf" download
+                    >Kế hoạch thực hiện đồ án (PDF)</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          © 2025 — Movie Showcase • Thiết kế demo. Thay đổi nội dung trong thư
+          mục assets/ để cập nhật hình ảnh và tài liệu.
+        </footer>
+      </section>
+
+      <!-- SUMMARY MODAL -->
+      <div
+        class="modal"
+        id="modalSummary"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+      >
+        <div class="backdrop" data-close></div>
+        <div class="panel" role="document">
+          <button class="closeBtn" aria-label="Đóng" data-close>&times;</button>
+          <h2>Tóm tắt phim</h2>
+          <p
+            id="summaryText"
+            style="color: var(--muted); margin-top: 8px; line-height: 1.6"
+          >
+            Hai bạn sinh viên đóng vai người kể chuyện đang thảo luận với nhau
+            và nhắc đến câu chuyện bi kịch về một người đàn ông đang sống lam lũ
+            ở vùng núi cùng vợ của mình. Gia đình của ông sống bươn trãi qua
+            ngày bằng nghề tiều phu đốn củi. Vào một ngày nọ, vợ của ông bị
+            thương nặng khi vượt qua ngọn núi để mang cơm cho chồng. Do bệnh
+            viện nằm bên kia ngọn núi nên ông đã không thể đưa vợ đến bệnh viện
+            để chữa trị kịp thời. Vợ của ông qua đời, ông đã rất đau đớn. Một
+            ngày nọ, ông thấy một đứa trẻ bị bệnh cũng không qua khỏi vì đường
+            quá xa, cảnh mẹ đứa trẻ khóc thảm đã bám lấy tâm trí và ám ảnh ông.
+            Bỗng một ngày, sức mạnh tinh thần mãnh liệt đã thôi thúc ông làm một
+            việc vô cùng lớn lao, đó là tự mình dùng búa để xẻ núi, tìm đường đi
+            thuận tiện cho dân làng nơi ông ở. Hành trình đầy gian lao trải dài
+            hơn 20 năm ấy đã trở thành niềm cảm hứng, năng lượng tích cực cho
+            nhiều người. Cuối cùng, ông cũng qua đời vì bệnh tật. Tuy nhiên, ông
+            đã làm được một điều mà vinh dự nhất trong cuộc đời của mình, ông đã
+            thành công chinh phục ước mơ, vượt qua mọi rào cản, để tìm lấy “một
+            con đường mới” cho riêng mình. Con đường xuyên qua núi ấy trở thành
+            di sản và biểu tượng cho lòng kiên định và tinh thần vượt qua khó
+            khăn. Sự nỗ lực phi thường, sự hi sinh cao cả, và một niềm tin sắt
+            đá, khao khát vượt qua mọi giới hạn của bản thân đều hiện rõ qua
+            hình ảnh người đàn ông ấy. Tinh thần “Being Bigger than Yourself”
+            được thể hiện sâu sắc và đầy ý nghĩa qua câu chuyện trên.
+          </p>
+        </div>
+      </div>
+
+      <!-- MEMBER MODAL -->
+      <div
+        class="modal"
+        id="modalMember"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+      >
+        <div class="backdrop" data-close></div>
+        <div class="panel">
+          <button class="closeBtn" aria-label="Đóng" data-close>&times;</button>
+          <div style="display: flex; gap: 12px; align-items: center">
+            <img
+              id="memberImg"
+              src="assets/member1.jpg"
+              alt=""
+              style="
+                width: 96px;
+                height: 96px;
+                border-radius: 10px;
+                object-fit: cover;
+              "
+            />
+            <div>
+              <div
+                id="memberName"
+                style="font-size: 18px; font-weight: 800"
+              ></div>
+              <div
+                id="memberId"
+                style="color: var(--muted); margin-top: 6px"
+              ></div>
+              <div
+                id="memberEmail"
+                style="color: var(--muted); margin-top: 6px"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
