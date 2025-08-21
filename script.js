@@ -56,7 +56,7 @@ members.forEach((m) => {
     const img = m.dataset.img;
     memberImg.src = img;
     memberName.textContent = name;
-    memberId.textContent = "Mã số: " + id;
+    memberId.textContent = "MSSV: " + id;
     memberEmail.textContent = "Email: " + email;
     openModal(modalMember);
   });
