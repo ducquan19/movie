@@ -15,7 +15,6 @@ const homeSection = document.getElementById("home");
 const aboutSection = document.getElementById("about");
 
 // Apply initial sources
-posterImg.src = POSTER_SRC;
 ytFrame.src = `https://www.youtube.com/embed/${YOUTUBE_ID}?rel=0`;
 btnWatch.href = `https://www.youtube.com/watch?v=${YOUTUBE_ID}`;
 
