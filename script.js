@@ -1,7 +1,7 @@
 // --- CONFIG ---
 const YOUTUBE_ID = "dQw4w9WgXcQ"; // <-- Thay bằng ID YouTube của phim/trailer
-const POSTER_SRC = "/assets/poster.jpg"; // đường dẫn poster
-const GROUP_IMG = "/assets/group.jpg";
+const POSTER_SRC = "./assets/poster.jpg";
+const GROUP_IMG = "./assets/group.jpg";
 
 // Init elements
 const btnSummary = document.getElementById("btn-summary");
