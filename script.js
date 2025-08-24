@@ -1,5 +1,5 @@
 // --- CONFIG ---
-const YOUTUBE_ID = "dQw4w9WgXcQ"; // <-- Thay bằng ID YouTube của phim/trailer
+const YOUTUBE_ID = "8RYLIN8GuEc"; // <-- Thay bằng ID YouTube của phim/trailer
 const POSTER_SRC = "./assets/poster.jpg";
 const GROUP_IMG = "./assets/group.jpg";
 
